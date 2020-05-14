@@ -14,8 +14,8 @@ li {
 	position: fixed;
 	z-index: 2;
 	width: 100%;
-	background-color:#fff;
-	height: 121px;
+	background-color:#D9D9CD;
+	height: 100px;
 	top: 0;
 	left: 0;
 }
@@ -28,6 +28,9 @@ li {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+.header-logo a img {
+	max-width:320px;
 }
 .header-list{
 	display: flex;
@@ -42,12 +45,12 @@ li {
 .header-list li:hover {
 	
 	transform: scale(1.1);
-	transition: all 1s;
+	transition: all .5s;
 }
 .header-list li a:hover{
 	color: #FEBD39;
-	transition: all .6s;
-	border-bottom:  1px solid #FCBB08;
+	transition: all .5s;
+	border-bottom:  1px solid #000;
 }
 .login{
 	font-weight: 600;
@@ -90,7 +93,7 @@ li {
 /*хлебные крошки*/
 .breadcrumbs {
 	display: inline-block;
-	margin: 200px auto 0;
+	margin: 120px auto 0;
 	counter-reset: flag;
 	color: black;
 	box-shadow: 0 0 2px #aaa;
@@ -156,28 +159,75 @@ li {
 /*начало основного блока*/
 .main {
 	padding: 50px 0;
-	margin-top: 121px;
+	margin-top: 100px;
+	
 }
-.main-contant {
+.main-content {
 	display: flex;
 	justify-content: space-between;
 	
 }
 .main__tittle{
 	max-width: 420px;
+	text-align: center;
+	padding: 10px;
 }
 .main__tittle h1 {
 	font-size: 46px;
 	color: black;
 	display: block;
 	margin-bottom: 40px;
+	text-align: center;
 	
 }
 .main__tittle h2 {
 	font-size: 36px;
-	text-align: right;
 	
 }
+/*блок с картой*/
+.map {
+	background: #EFEEEC;
+}
+/*footer*/
+.footer {
+	padding: 25px 0;
+	background-color: black;
+	color: chocolate;
+}
+.footer-list {
+	display: flex;
+	justify-content: center;
+	margin: 15px 0;
+	
+}
+.footer-list li {
+	margin-right: 10px;
+	text-transform: lowercase;
+}
+.footer-list li a {
+	color: #aaa;
+	padding-left: 5px;
+}
+.copyright {
+	text-align: center;
+	max-width: 600px;
+	margin: 10px auto;
+}
+.tel{
+	display: flex;
+	justify-content: center;
+}
+.tel i {
+	display:flex;
+	justify-content: center;
+	
+}
+.tel a {
+	color: #ccc;
+	
+	
+}
+
 /*медиа запросы*/
 @media (max-width:1100px) {
 	.burger-menu{
@@ -189,7 +239,7 @@ li {
 	.header-list{
 		display: none;
      	position: absolute;
-     	top: 150px;
+     	top: 100px;
 		left: 0;
 		right: 0;
 		width: 100%;
@@ -210,6 +260,27 @@ li {
 	}
 	.header-btn {
 		margin-right: 100px;
+	}
+	.header-logo a img {
+		margin-left: 15px;
+	}
+}
+@media (max-width:943px){
+	.main__image img{
+		width: 390px;
+	}
+	.main__tittle h1 {
+		font-size: 36px;
+		margin-bottom: 28px;
+  	}
+  .main__tittle h2 {
+	font-size: 24px;
+	}
+
+}
+@media (max-width:768px){
+	.main__image img{
+		width: 319px;
 	}
 
 }
