@@ -1,0 +1,215 @@
+* {
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+.header {
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	background-color:#fff;
+	height: 121px;
+	top: 0;
+	left: 0;
+}
+.container {
+	max-width: 1240px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+.header-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header-list{
+	display: flex;
+	
+}
+.header-list li a{
+	margin-right: 30px;
+	font-size: 18px;
+	color: black;
+	text-transform: uppercase;
+}
+.header-list li:hover {
+	
+	transform: scale(1.1);
+	transition: all 1s;
+}
+.header-list li a:hover{
+	color: #FEBD39;
+	transition: all .6s;
+	border-bottom:  1px solid #FCBB08;
+}
+.login{
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #fff;
+	background-color:#FEBD39;
+	opacity: 0.6;
+	padding: 8px 43px;
+	border-radius: 5px;
+}
+.login:hover{
+	opacity: 1;
+	transition: all .5s;
+}
+
+/*бургер меню*/
+.burger-menu {
+	display: none;
+	cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+	transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+.change .bar2 {
+	opacity: 0;
+}
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+	transform: rotate(45deg) translate(-8px, -8px) ;
+}
+/*хлебные крошки*/
+.breadcrumbs {
+	display: inline-block;
+	margin: 200px auto 0;
+	counter-reset: flag;
+	color: black;
+	box-shadow: 0 0 2px #aaa;
+	left: auto;
+	right: auto;
+}
+
+.breadcrumbs a {
+	position: relative;
+	float: left;
+	padding-left: 60px;
+	padding-right: 10px;
+	text-decoration: none;
+	line-height: 36px;
+	color: black;
+	background: white;
+	transition: all 0.5s;
+}
+
+.breadcrumbs a::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -18px;
+	z-index: 1;
+	width: 36px;
+	height: 36px;
+	background: white;
+	box-shadow: 1px 1px 0 1px #ddd;
+	border-radius: 50px 0 0 0;
+	transform: rotate(-45deg) scale(0.73);
+	transition: all 0.5s;
+	text-align: center;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:hover::after,
+.breadcrumbs a.active,
+.breadcrumbs a.active::after{
+	background: #f1c40f;
+}
+
+.breadcrumbs a::before {
+	content: counter(flag);
+	counter-increment: flag;
+	position: absolute;
+	top: 8px;
+	left: 30px;
+	line-height: 20px;
+	box-shadow: 0 0 2px #ccc;
+	width: 20px; background-color: white;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.breadcrumbs a:first-child {
+	padding-left: 46px;
+}
+
+.breadcrumbs a:first-child::before {
+	left: 14px;
+}
+/*начало основного блока*/
+.main {
+	padding: 50px 0;
+	margin-top: 121px;
+}
+.main-contant {
+	display: flex;
+	justify-content: space-between;
+	
+}
+.main__tittle{
+	max-width: 420px;
+}
+.main__tittle h1 {
+	font-size: 46px;
+	color: black;
+	display: block;
+	margin-bottom: 40px;
+	
+}
+.main__tittle h2 {
+	font-size: 36px;
+	text-align: right;
+	
+}
+/*медиа запросы*/
+@media (max-width:1100px) {
+	.burger-menu{
+		display: block;
+		position: absolute;
+		z-index: 3;
+		right: 20;
+	}
+	.header-list{
+		display: none;
+     	position: absolute;
+     	top: 150px;
+		left: 0;
+		right: 0;
+		width: 100%;
+		text-align: center;
+		z-index: 5;
+   	border-top: 2px solid #000;
+	}
+	.header-list li {
+		
+		border-bottom: 2px solid #000;
+		text-align: center;
+		padding: 20px 0;
+		background-color: #FEBD39;
+		
+	}
+	.header-list li a {
+		color: #fff;
+	}
+	.header-btn {
+		margin-right: 100px;
+	}
+
+}
