@@ -162,6 +162,7 @@ li {
 	margin-top: 100px;
 	
 }
+
 .main-content {
 	display: flex;
 	justify-content: space-between;
@@ -182,11 +183,145 @@ li {
 }
 .main__tittle h2 {
 	font-size: 36px;
+	padding-bottom: 45px;
 	
 }
+.contacts {
+	width: 100%;
+	height: 100px;
+	background:#DDDDDD ;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+}
+.contact-form {
+	max-width: 800px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+.contact-form input {
+	width: 500px;
+	height: 60px;
+	border-width: 2px 0 2px 2px;
+	border-radius: 5px;
+	outline: none;
+	padding: 10px;
+	
+	
+}
+.contact-form button {
+	width: 70px;
+	height: 60px;
+	border-width: 0px;
+	border-radius: 5px;
+	background: #FEBD39;
+	position: absolute;
+	cursor: pointer;
+	right: 0;
+	outline: none;
+}
+.contact-form span {
+	margin-right: 20px;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.contacts-link {
+	width: 100%;
+	height: 200px;
+	border-radius: 5px;
+	background-color: #FEBD39;
+	margin-top: 50px;
+	padding: 20px;
+}
+.contacts-link span {
+	font-size: 20px;
+	color: #000;
+	padding-bottom: 40px;
+	display: block;
+}
+.contact-list li{
+	margin-bottom: 20px;
+}
+.contact-list li a{
+	font-size: 18px;
+	margin-left: 10px;
+	color: black;
+	text-decoration:underline ;
+	
+}
+
+.about {
+	max-width: 1200px;
+	text-transform: uppercase;
+}
+.about-text {
+	display: flex;
+	justify-content: space-between;
+	text-align: justify;
+	padding: 20px;
+}
+.about-text p{
+	max-width: 350px;
+	margin-right: 15px;
+	line-height: normal;
+}
+.main__tittle p {
+	max-width: 420px;
+	text-align: justify;
+	margin: 15px auto;
+	line-height: normal;
+	
+}
+.main__tittle a {
+	width:100%;
+	padding: 15px;
+	background-color: #FEBD39;
+	display: block;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #fff;
+	opacity: 0.6;
+	border-radius: 5px;
+
+}
+.main__tittle a:hover {
+	opacity: 1;
+	transition: all .5s;
+}
+.main-items__list {
+	display: flex;
+	justify-content: space-between;
+	color: red;
+	padding: 40px;
+}
+.main-list li a {
+	font-size: 18px;
+	color: #000;
+	margin-left: 5px;
+	margin-bottom: 15px;
+	font-weight: 600;
+	line-height: normal;
+	
+	
+}
+i {
+	animation: radial-pulse 2s infinite;
+	
+}
+@keyframes radial-pulse {
+	0% {
+		 transform: scale(1.0);
+
+	}
+	100% {
+		 transform: scale(1.4);
+	}
+}
+
 /*блок с картой*/
 .map {
-	background: #EFEEEC;
+	background-color: #EFEEEC;
 }
 /*footer*/
 .footer {
