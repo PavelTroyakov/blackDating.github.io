@@ -44,14 +44,10 @@ li {
 	text-transform: uppercase;
 }
 .header-list li:hover {
-	
-	transform: scale(1.1);
 	transition: all .5s;
 }
 .header-list li a:hover{
 	color: #fff;
-	transition: all .5s;
-	border-bottom:  1px solid #000;
 }
 .login{
 	font-weight: 600;
@@ -274,7 +270,7 @@ li {
 }
 .main__tittle a:hover {
 	opacity: 1;
-	transition: all .5s;
+	
 }
 .main-items__list {
 	display: flex;
@@ -289,17 +285,6 @@ li {
 	margin-bottom: 15px;
 	font-weight: 600;
 	line-height: normal;
-}
-i {
-	animation: radial-pulse 2s infinite;
-}
-@keyframes radial-pulse {
-	0% {
-		 transform: scale(1.0);
-	}
-	100% {
-		 transform: scale(1.4);
-	}
 }
 /*блок с картой*/
 .map {
