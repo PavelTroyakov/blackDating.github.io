@@ -48,7 +48,7 @@ li {
 	transition: all .5s;
 }
 .header-list li a:hover{
-	color: #FEBD39;
+	color: #fff;
 	transition: all .5s;
 	border-bottom:  1px solid #000;
 }
@@ -65,7 +65,6 @@ li {
 	opacity: 1;
 	transition: all .5s;
 }
-
 /*бургер меню*/
 .burger-menu {
 	display: none;
@@ -78,7 +77,6 @@ li {
 	margin: 6px 0;
 	transition: 0.4s;
 }
-
 .change .bar1 {
 	-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
 	transform: rotate(-45deg) translate(-9px, 6px) ;
@@ -100,7 +98,6 @@ li {
 	left: auto;
 	right: auto;
 }
-
 .breadcrumbs a {
 	position: relative;
 	float: left;
@@ -112,7 +109,6 @@ li {
 	background: white;
 	transition: all 0.5s;
 }
-
 .breadcrumbs a::after {
 	content: '';
 	position: absolute;
@@ -128,14 +124,12 @@ li {
 	transition: all 0.5s;
 	text-align: center;
 }
-
 .breadcrumbs a:hover,
 .breadcrumbs a:hover::after,
 .breadcrumbs a.active,
 .breadcrumbs a.active::after{
 	background: #f1c40f;
 }
-
 .breadcrumbs a::before {
 	content: counter(flag);
 	counter-increment: flag;
@@ -148,25 +142,23 @@ li {
 	border-radius: 50%;
 	text-align: center;
 }
-
 .breadcrumbs a:first-child {
 	padding-left: 46px;
 }
-
 .breadcrumbs a:first-child::before {
 	left: 14px;
 }
 /*начало основного блока*/
 .main {
 	padding: 50px 0;
-	margin-top: 100px;
-	
+	margin-top: 100px;	
 }
-
+.main-list li a:hover {
+	color: red;
+}
 .main-content {
 	display: flex;
 	justify-content: space-between;
-	
 }
 .main__tittle{
 	max-width: 420px;
@@ -179,12 +171,10 @@ li {
 	display: block;
 	margin-bottom: 40px;
 	text-align: center;
-	
 }
 .main__tittle h2 {
 	font-size: 36px;
 	padding-bottom: 45px;
-	
 }
 .contacts {
 	width: 100%;
@@ -193,6 +183,7 @@ li {
 	padding: 20px;
 	display: flex;
 	align-items: center;
+	border-radius: 5px;
 }
 .contact-form {
 	max-width: 800px;
@@ -207,8 +198,6 @@ li {
 	border-radius: 5px;
 	outline: none;
 	padding: 10px;
-	
-	
 }
 .contact-form button {
 	width: 70px;
@@ -247,10 +236,8 @@ li {
 	font-size: 18px;
 	margin-left: 10px;
 	color: black;
-	text-decoration:underline ;
-	
+	text-decoration:underline ;	
 }
-
 .about {
 	max-width: 1200px;
 	text-transform: uppercase;
@@ -271,7 +258,6 @@ li {
 	text-align: justify;
 	margin: 15px auto;
 	line-height: normal;
-	
 }
 .main__tittle a {
 	width:100%;
@@ -283,7 +269,6 @@ li {
 	color: #fff;
 	opacity: 0.6;
 	border-radius: 5px;
-
 }
 .main__tittle a:hover {
 	opacity: 1;
@@ -302,23 +287,18 @@ li {
 	margin-bottom: 15px;
 	font-weight: 600;
 	line-height: normal;
-	
-	
 }
 i {
 	animation: radial-pulse 2s infinite;
-	
 }
 @keyframes radial-pulse {
 	0% {
 		 transform: scale(1.0);
-
 	}
 	100% {
 		 transform: scale(1.4);
 	}
 }
-
 /*блок с картой*/
 .map {
 	background-color: #EFEEEC;
@@ -333,7 +313,6 @@ i {
 	display: flex;
 	justify-content: center;
 	margin: 15px 0;
-	
 }
 .footer-list li {
 	margin-right: 10px;
@@ -355,15 +334,20 @@ i {
 .tel i {
 	display:flex;
 	justify-content: center;
-	
+	margin-right: 5px;
 }
 .tel a {
 	color: #ccc;
-	
-	
 }
-
 /*медиа запросы*/
+@media (max-width:1240px){
+	.main__image img{
+		width: 390px;
+	}
+	.main-about {
+		margin-top: 25px;
+  }
+}
 @media (max-width:1100px) {
 	.burger-menu{
 		display: block;
@@ -373,17 +357,16 @@ i {
 	}
 	.header-list{
 		display: none;
-     	position: absolute;
-     	top: 100px;
+   position: absolute;
+   top: 100px;
 		left: 0;
 		right: 0;
 		width: 100%;
 		text-align: center;
 		z-index: 5;
-   	border-top: 2px solid #000;
+	border-top: 2px solid #000;
 	}
 	.header-list li {
-		
 		border-bottom: 2px solid #000;
 		text-align: center;
 		padding: 20px 0;
@@ -402,20 +385,153 @@ i {
 }
 @media (max-width:943px){
 	.main__image img{
-		width: 390px;
+		width: 375px;
 	}
 	.main__tittle h1 {
 		font-size: 36px;
 		margin-bottom: 28px;
-  	}
-  .main__tittle h2 {
+}
+.main__tittle h2 {
 	font-size: 24px;
 	}
-
+	.about-text {
+		flex-wrap: wrap;
+	}
+	.about-text p{
+		margin-bottom: 10px;
+	}
+	.main-about {
+		padding: 15px 0;
+	}
+	.main__tittle h1 {
+		font-size: 24px;
+		
+  }
+}
+@media (max-width:903px){
+	.main-items__list {
+		display: flex;
+		justify-content: space-between;
+		color: red;
+		padding: 15px;
+	}
+	.main-list li a {
+		font-size: 15px;
+		color: #000;
+		margin-left: 5px;
+		margin-bottom: 15px;
+		font-weight: 400;
+		line-height: normal;
+  }
 }
 @media (max-width:768px){
 	.main__image img{
 		width: 319px;
 	}
+	.main-items__list{
+		flex-wrap: wrap;
+	}
+	.main-list {
+		width: 50%;
+		margin-bottom: 20px;
+		
+	}
+	.main__tittle h1 {
+		font-size: 28px;
+		margin-bottom: 10px;
+  }
+  .main__tittle h2 {
+	font-size: 18px;
+	padding-bottom: 10px;
+}
+.main__tittle p {
+	font-size: 14px;
+}
+}
+@media (max-width:614px){
+	.footer-list {
+		flex-wrap: wrap;
+		margin: 0 auto;
+		max-width: 320px;
+	}
+	.footer-list li {
+		margin-bottom: 10px;
+		
+	}
+}
+@media (max-width:564px){
+	.main__tittle h1 {
+		font-size: 20px;
+		
+  }
+  .main__tittle h2 {
+	font-size: 16px;
+	
+}.main-list {
+	width: 100%;
+	
+	
+}
+.main-items__list {
+	max-width: 400px;
+	margin: 0 auto;
+}
+.main__image img {
+	width: 215px;
+}
+}
+@media (max-width:505px){
+	.header-logo a img {
+		max-width: 245px;
+  }
+  .container {
+	padding: 0px 5px;
+	}
+	.header-btn {
+		margin-right: 0px;
+  }
+  .header {
+	height: 70px;
+	}
+	.header-list {
+		top: 70px;
+	}
+	.header-list li {
+		
+		padding: 10px 0;
+	}
+}
+@media (max-width:440px){
+	.main__tittle {
+		width: 100%;
+	}
+	.main-content {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		align-items: center;
+  }
+}
+@media (max-width:416px){
+	.header-logo a img {
+		margin-left: 30px;
 
+  	}
+  .header {
+	height: 50px;
+	}
+	.header-logo a img {
+		max-width: 160px;
+  }
+  .login {
+	font-weight: 400;
+	padding: 3px 20px;
+	}
+	.header-list {
+		top: 50px;
+	}
+	.header-list li {
+		
+		padding: 10px 0;
+	}
 }
